@@ -1,7 +1,6 @@
 let listaNombres = [];
 let nombresUsuario = document.getElementById("amigo");
 let i=0;
-let li = document.createElement("li");
 let ul = document.getElementById("listaAmigos");
 
 /*
@@ -19,16 +18,18 @@ function agregarAmigo(){
     } else {
         listaNombres.push(nombresUsuario.value);
         limpiarCaja();
-        console.log(listaNombres);
         mostrarNombres();
     }
 }
 
-
 function mostrarNombres(){
-    for (i; i<listaNombres.length; i++);
-    console.log (listaNombres[i]);
-    li.textContent = listaNombres[i];
-    ul.appendChild(li);
+    ul.innerHTML = "";
+    for (i; i<listaNombres.length; i++){
+        console.log (listaNombres[i]);
+        let li = document.createElement("li");
+        li.textContent = listaNombres;
+        ul.appendChild(li);
+
+    }
 }
 
