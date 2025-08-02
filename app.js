@@ -1,6 +1,5 @@
 let listaNombres = [];
 let nombresUsuario = document.getElementById("amigo");
-let i=0;
 let ul = document.getElementById("listaAmigos");
 
 /*
@@ -24,10 +23,10 @@ function agregarAmigo(){
 
 function mostrarNombres(){
     ul.innerHTML = "";
-    for (i; i<listaNombres.length; i++){
+    for (let i=0; i<listaNombres.length; i++){
         console.log (listaNombres[i]);
         let li = document.createElement("li");
-        li.textContent += listaNombres;
+        li.textContent += listaNombres[i];
         ul.appendChild(li);
 
     }
