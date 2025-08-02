@@ -27,7 +27,7 @@ function mostrarNombres(){
     for (i; i<listaNombres.length; i++){
         console.log (listaNombres[i]);
         let li = document.createElement("li");
-        li.textContent = listaNombres;
+        li.textContent += listaNombres;
         ul.appendChild(li);
 
     }
